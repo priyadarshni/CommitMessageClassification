@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module commit_classifier</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>commit_classifier</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cpriya%5Cdesktop%5Cnew%5Ccommit_classifier.py">c:\users\priya\desktop\new\commit_classifier.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Wed&nbsp;May&nbsp;&nbsp;6&nbsp;09:14:50&nbsp;2020<br>
+&nbsp;<br>
+@author:&nbsp;Priya</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sklearn.metrics.html">sklearn.metrics</a><br>
+<a href="sklearn.model_selection.html">sklearn.model_selection</a><br>
+</td><td width="25%" valign=top><a href="sklearn.naive_bayes.html">sklearn.naive_bayes</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="seaborn.html">seaborn</a><br>
+<a href="sklearn.svm.html">sklearn.svm</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Encoder</strong> = LabelEncoder()<br>
+<strong>Final_words</strong> = ['change', 'success', 'checker', 'set', 'different', 'processed', 'success', 'bit']<br>
+<strong>Naive</strong> = MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)<br>
+<strong>SVM</strong> = SVC(C=1.0, cache_size=200, class_weight=None, co...ne, shrinking=True,
+    tol=0.001, verbose=False)<br>
+<strong>Test_X</strong> = 1399               ['rewrite', 'ukrp', 'result',...t']
+Name: commit_text, Length: 425, dtype: object<br>
+<strong>Test_X_Tfidf</strong> = &lt;425x875 sparse matrix of type '&lt;class 'numpy.fl... stored elements in Compressed Sparse Row format&gt;<br>
+<strong>Test_Y</strong> = array([1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0,...1, 1, 0, 1, 0, 1, 1,
+       0, 0, 1, 1, 1, 1, 1])<br>
+<strong>Tfidf_vect</strong> = TfidfVectorizer(analyzer='word', binary=False, d...   tokenizer=None, use_idf=True, vocabulary=None)<br>
+<strong>Train_X</strong> = 1142                                            ......
+Name: commit_text, Length: 990, dtype: object<br>
+<strong>Train_X_Tfidf</strong> = &lt;990x875 sparse matrix of type '&lt;class 'numpy.fl... stored elements in Compressed Sparse Row format&gt;<br>
+<strong>Train_Y</strong> = array([0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1,... 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0])<br>
+<strong>auc</strong> = 0.9927044634684757<br>
+<strong>ax</strong> = &lt;matplotlib.axes._subplots.AxesSubplot object&gt;<br>
+<strong>class_names</strong> = [0, 1]<br>
+<strong>cnf_matrix</strong> = array([[ 98,  25],
+       [  4, 298]], dtype=int64)<br>
+<strong>df</strong> =       Unnamed: 0                  Name  ...  ref...cker', 'set', 'diffe...
+
+[1415 rows x 16 columns]<br>
+<strong>entry</strong> = ['changed', 'success', 'checker', 'to', 'set', 'different', 'processed', 'success', 'bit']<br>
+<strong>fig</strong> = &lt;Figure size 640x478 with 2 Axes&gt;<br>
+<strong>fpr</strong> = array([0.        , 0.        , 0.        , 0.   ...9593, 0.69105691,
+       0.77235772, 1.        ])<br>
+<strong>index</strong> = 1414<br>
+<strong>logreg</strong> = LogisticRegression(C=1.0, class_weight=None, dua..., verbose=0,
+                   warm_start=False)<br>
+<strong>pred_SVM</strong> = array([0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0,...1, 1, 0, 1, 1, 1, 0,
+       1, 1, 1, 1, 1, 0, 1])<br>
+<strong>predictions_NB</strong> = array([0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0,...1, 1, 0, 1, 1, 1, 0,
+       1, 1, 1, 1, 1, 0, 1])<br>
+<strong>regres_pred</strong> = array([0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0,...1, 1, 1, 1, 1, 1, 0,
+       1, 1, 1, 1, 1, 0, 1])<br>
+<strong>rf_predict</strong> = array([0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0,...1, 1, 0, 1, 1, 1, 0,
+       1, 1, 1, 1, 1, 0, 1])<br>
+<strong>rfc</strong> = RandomForestClassifier(bootstrap=True, class_wei...                     verbose=0, warm_start=False)<br>
+<strong>stopwords</strong> = &lt;WordListCorpusReader in 'C:\\Users\\Priya\\AppData\\Roaming\\nltk_data\\corpora\\stopwords'&gt;<br>
+<strong>tag</strong> = 'NN'<br>
+<strong>tag_map</strong> = defaultdict(&lt;function &lt;lambda&gt; at 0x000001DA3B32...C': 'n', 'I': 'n', 'P': 'n', 'D': 'n', 'F': 'n'})<br>
+<strong>tick_marks</strong> = array([0, 1])<br>
+<strong>tpr</strong> = array([0.        , 0.10264901, 0.11589404, 0.139...    , 1.        ,
+       1.        , 1.        ])<br>
+<strong>wn</strong> = &lt;WordNetCorpusReader in 'C:\\Users\\Priya\\AppData\\Roaming\\nltk_data\\corpora\\wordnet'&gt;<br>
+<strong>word</strong> = 'bit'<br>
+<strong>word_Final</strong> = 'bit'<br>
+<strong>word_Lemmatized</strong> = &lt;WordNetLemmatizer&gt;<br>
+<strong>y_pred_proba</strong> = array([0.04050356, 0.61625773, 0.8667101 , 0.966... 0.96698621, 0.8475624 , 0.05679625, 0.93623711])</td></tr></table>
+</body></html>
