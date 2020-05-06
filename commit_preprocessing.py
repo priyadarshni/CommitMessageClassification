@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 
 from nltk.corpus import stopwords
 
-#import tokenizer
+#import tokenizer 
 
 from nltk.tokenize import RegexpTokenizer
 
