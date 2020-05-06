@@ -1,5 +1,12 @@
 # CommitMessageClassification
  this Project aims to support developers and managers in understanding the maintenance activities performed in their code repositories by analyzing  the source code repository to identify unusual commits and classify those into  different maintenance activities, already added by developers in their version control systems
+ 
+## Data Set used in this project:
+
+For this project, commits from projects written in java, C, C++ is used. To fetch data from GitProc we need to provide   GitHub project URL and this software gives .sql files of data. Data includes commits, author id, date, time of commit, refactoring details, classes, ﬁle path, etc.
+
+* Data directory has test data file containing commits for projects written in C, C++, Java. It is publicly accessible. The actual file I am using for this project is not publicly accessible, but you can download the test data file and run codes from these scripts.
+
 
 ## How to run the files from CommitMessageClassification repository to generate results?
 
