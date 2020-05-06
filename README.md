@@ -1,5 +1,5 @@
 # CommitMessageClassification
- this Project aims to support developers and managers in understanding the maintenance activities performed in their code repositories by analyzing  the source code repository to identify unusual commits and classify those into  different maintenance activities, already added by developers in their version control systems
+ This Project aims to support developers and managers in understanding the maintenance activities performed in their code repositories by analyzing  the source code repository to identify unusual commits and classify those into  different maintenance activities, already added by developers in their version control systems
  
 ## Data Set used in this project:
 
@@ -51,7 +51,7 @@ use the following link to download this software:
 
 ## Once all the softwares are successfully installed you can run these scrips from respository:
 ## Steps to run these scripts:
-* Usinh jupyter
+* Using jupyter
 1. Open Jupyter
 2.  Open these files 
 3. Run 
