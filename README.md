@@ -67,4 +67,6 @@ python filename.py
 1. Open these files 
 2. Run as per instructions ( https://www.jetbrains.com/help/pycharm/creating-and-running-your-first-python-project.html)
 
-
+## Documentation
+* Documentation of this project is in the following directory :
+(https://github.com/priyadarshni/CommitMessageClassification/blob/master/doc/_build/html/index.html) 
