@@ -21,7 +21,7 @@ Install Anaconda on Mac (https://docs.anaconda.com/anaconda/install/mac-os/)
 **If you follow the similar steps given on above websites you will have different python editors in your system installed**
 
 
-# How to install required text- processing libraries? 
+## How to install required text- processing libraries? 
 
 * Run Python interpreter on Windows/ Linux / Mac
 1. Enter the command 
@@ -36,8 +36,28 @@ Install Anaconda on Mac (https://docs.anaconda.com/anaconda/install/mac-os/)
  brown.words()
  
  ```
-# How to install SQLite DB? 
+## How to install SQLite DB? 
 SQLite DB is required to access the dataset.
 
 use the following link to download this software:
 (https://sqlitebrowser.org/dl/)
+
+## Once all the softwares are successfully installed you can run these scrips from respository:
+## Steps to run these scripts:
+* Usinh jupyter
+1. Open Jupyter
+2.  Open these files 
+3. Run 
+
+* Using Command line
+1. use command 
+```
+python filename.py
+
+```
+
+* Using IDE (PyCharm / Spyder)
+1. Open these files 
+2. Run as per instructions ( https://www.jetbrains.com/help/pycharm/creating-and-running-your-first-python-project.html)
+
+
