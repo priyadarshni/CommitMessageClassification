@@ -55,8 +55,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import CountVectorizer
 
 
+url = 'https://github.com/priyadarshni/CommitMessageClassification/blob/master/Data/Commit%20Messages%20Data%20for%20Heuristics.csv'
+df = pd.read_csv(url, index_col=0)
 
-df = pd.read_csv('C:/Users/Priya/Desktop/Capstone_Commits_sem2/test_projectclass.csv')
 
 df
 
