@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html lang="Python">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to CommitClassifier&#39;s documentation! &#8212; CommitClassifier 0.0.052020 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-commitclassifier-s-documentation">
+<h1>Welcome to CommitClassifier's documentation!<a class="headerlink" href="#welcome-to-commitclassifier-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="goal-of-this-project">
+<h2>Goal of this Project:<a class="headerlink" href="#goal-of-this-project" title="Permalink to this headline">¶</a></h2>
+<p>This Project aims to support developers and managers in understanding the maintenance activities performed in their code repositories by analyzing the
+source code repository to identify unusual commits and classify those into different maintenance activities, already added by developers in their version control systems.</p>
+</div>
+<div class="section" id="different-modules-of-the-project">
+<h2>Different Modules of the project:<a class="headerlink" href="#different-modules-of-the-project" title="Permalink to this headline">¶</a></h2>
+<p>Data Ingestion :   Data for the proposed project is extracted using GiProc software. For this project,
+commits from projects written in java, C, C++ is used. To fetch data from Git Proc we need to provide GitHub project URL and this software gives ﬂat ﬁles
+of data. Data includes commits, author id, date, time of commit, refactoring details, classes, ﬁle path, etc. The ﬁnal model will be developed for 30+ projects
+written in C, C++, and java. For the temporary purpose, data is being stored in the SQL server. Data stored in the SQL server is raw data and it’s notusableformodeldevelopment,
+thus data cleaning is required. Every commit has attributes like commitid,message,authorname,id,ﬁlepath.</p>
+<p>Data Cleaning: Text-Preprocessing: The goal of the data cleaning layer is to prepare data for the modeling layer</p>
+<p>Data Analysis  : Analyze data to find out interesting insights from data, in commitclasssifier.py file, you can find I have analyzed commits using date ,
+time , commiter email , location</p>
+<p>Data Modelling: To build a model different I have considered different hueristics:
+Different hueristics are:
+Commit whose language is not the same as the language of the project
+Commits from an outstanding committer
+Commits sent on an unusual time
+Short commits
+Commit having words or characters from another language than English.
+Once these hueristics are set, final multiclass classifier will be built to detect unusual commits and classify them into differnt manitenance categories.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="module-1-commit-text-preprocessing">
+<h2>Module 1: Commit Text Preprocessing<a class="headerlink" href="#module-1-commit-text-preprocessing" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-2-data-modelling">
+<h2>Module 2: Data Modelling<a class="headerlink" href="#module-2-data-modelling" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">CommitClassifier</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Priya.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
