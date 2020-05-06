@@ -49,7 +49,7 @@ SQLite DB is required to access the dataset.
 use the following link to download this software:
 (https://sqlitebrowser.org/dl/)
 
-## Once all the softwares are successfully installed you can run these scrips from respository:
+## Once all the softwares are successfully installed you can run these scripts from respository:
 ## Steps to run these scripts:
 * Using jupyter
 1. Open Jupyter
