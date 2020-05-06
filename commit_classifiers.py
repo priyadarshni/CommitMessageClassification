@@ -8,33 +8,19 @@
 
 
 
-
-
-
-
 #	heuristic to check if commit is from different project
 
 #	Build a binary classifier to classify commits from different projects
-
-
 
 #	import all libraies required to build binary and multiclass classifiers
 
 #	import libray for python data structures, array, dataframe
 
-
-
 import pandas as pd
 
 import numpy as np
 
-
-
 #	import libararies from NLTK package for text pre-processing
-
-
-
-
 
 from nltk.tokenize import word_tokenize
 
@@ -44,11 +30,7 @@ from nltk.corpus import stopwords
 
 from nltk.stem import WordNetLemmatizer
 
-
-
 #	import libary to encode classes and refactoring type
-
-
 
 from sklearn.preprocessing import LabelEncoder
 
@@ -56,19 +38,11 @@ from collections import defaultdict
 
 from nltk.corpus import wordnet as wn
 
-
-
 #	import libraries to perform feature extraction , TFIDF
-
-
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-
-
 #	import libraries hving inbuilt fnctions of classifiers
-
-
 
 from sklearn import model_selection, naive_bayes, svm
 
@@ -99,16 +73,9 @@ df.isna().sum()
 df.dropna()
 
 
-
-
-
 #	drop nan values from commit message column
 
-
-
 df['Message'].dropna(inplace=True)
-
-
 
 #    normalize text for further processing
 
@@ -277,10 +244,6 @@ predictions_NB = Naive.predict(Test_X_Tfidf)
 
 print("Naive Bayes Accuracy Score -> ",accuracy_score(predictions_NB, Test_Y)*100)
 
-
-
-
-
 #	Analyze results:
 
 #	confusin matrix for binary naive bayes classifier
@@ -289,17 +252,11 @@ print("Naive Bayes Accuracy Score -> ",accuracy_score(predictions_NB, Test_Y)*10
 
 #	import libary to calculate confusion matrix
 
-
-
 from sklearn import metrics
 
 cnf_matrix = metrics.confusion_matrix(Test_Y, predictions_NB)
 
 cnf_matrix
-
-
-
-
 
 #	Plot confusion matrix for naive bayes classifier uisng matplotlib
 
@@ -543,8 +500,6 @@ plt.xlabel('Predicted Project label')
 
 
 
-
-
 #Build a classifier using logistic regression
 
 # fit the training dataset on the classifier
@@ -637,8 +592,6 @@ plt.show()
 
 
 
-
-
 # -*- coding: utf-8 -*-
 
 #
@@ -650,9 +603,6 @@ plt.show()
 #	@author: Priya
 
 #
-
-
-
 
 
 #	heuristic to check refactoring type of commit 
@@ -680,8 +630,6 @@ Encoder = LabelEncoder()
 Train_Y = Encoder.fit_transform(Train_Y)
 
 Test_Y = Encoder.fit_transform(Test_Y)
-
-
 
 
 
@@ -1109,10 +1057,6 @@ plt.show()
 
 
 
-
-
-
-
 #	plot boxplot of time to detect outliers in commit time
 
 
@@ -1130,8 +1074,6 @@ import seaborn as sns
 
 import matplotlib.pyplot as plt
 
-
-
 a4_dims = (15.7, 10.27)
 
 fig, ax = pyplot.subplots(figsize=a4_dims)
@@ -1141,12 +1083,7 @@ fig, ax = pyplot.subplots(figsize=a4_dims)
 sns.boxplot(ax=ax,x=df.new_time, y=df.Id)
 
 
-
-
-
 #plot boxplot to detect outliers for date of commits
-
-
 
 a4_dims = (15.7, 10.27)
 
@@ -1155,9 +1092,6 @@ fig, ax = pyplot.subplots(figsize=a4_dims)
 
 
 sns.boxplot(ax=ax,x=df.new_data, y=df.Id)
-
-
-
 
 
 #	Heuristic 4: check for commit from outstanding commiter
@@ -1175,13 +1109,7 @@ count_auth= df.AuthorEmail.str.split(expand=True).stack().value_counts() <2
 count_auth
 
 
-
-
-
 #	detect unusual commits
-
-
-
 
 
 #df.loc[df['AuthorEmail'].isin('dan@metabroadcase.com')]
