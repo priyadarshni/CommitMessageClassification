@@ -6,7 +6,7 @@
 ## Software Requirements
 * Anaconda : Python 
 * Text processing libraries 
-*SQLite DB 
+* SQLite DB 
 
 ## How to install Anaconda?
 * On Windows machine:
@@ -24,10 +24,20 @@ Install Anaconda on Mac (https://docs.anaconda.com/anaconda/install/mac-os/)
 # How to install required text- processing libraries? 
 
 * Run Python interpreter on Windows/ Linux / Mac
-1.Enter the command 
+1. Enter the command 
   ```
   import nltk
   nltk.download ()
   ```
+ 2. Follow steps( https://www.guru99.com/download-install-nltk.html)
+ 3. Test if NLTK is installed properly on your system 
+ ```
+ from nltk.corpus import brown
+ brown.words()
+ 
+ ```
+# How to install SQLite DB? 
+SQLite DB is required to access the dataset.
 
-
+use the following link to download this software:
+(https://sqlitebrowser.org/dl/)
